@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3d测试</title>
+    <style>
+        *{margin:0;padding:0; box-sizing: border-box; }
+        body{
+            background:#ccc;
+        }
+        .stage{
+            width:120px;
+            height:120px;
+            position:absolute;
+            left:50%;
+            top:50%;
+            perspective: 300px;
+            /*perspective-origin:0% -10%;*/
+        }
+        .content{
+            width:40px;
+            height:120px;
+            transform-style: preserve-3d;
+            position:relative;
+            transform: rotate3d(0,1,0,30deg);
+            
+            
+        }
+        .content > div{
+            position:absolute;
+            background:rgba(69,181,234,1);
+            /*border:1px solid #000;*/
+        }
+        .t{
+            top:-20px;
+            width:40px;
+            height:40px;
+            transform: rotateX(90deg);
+        }
+        .b{
+            top:100px;
+            width:40px;
+            height:40px;
+            transform: rotateX(90deg);
+        }
+        .content .f{
+            width:40px;
+            height:120px;
+            transform: translateZ(20px);
+            background:none;
+        }
+        .content .h{
+            width:40px;
+            height:120px;
+            transform: translateZ(-20px);
+            background:rgba(44,161,223,1);
+        }
+        .l{
+            left:-20px;
+            width:40px;
+            height:120px;
+            transform: rotateY(90deg) ;
+        }
+        .r{
+            left:20px;
+            width:40px;
+            height:120px;
+            transform: rotateY(90deg) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="content">
+            <div class="t"></div>
+            <div class="b"></div>
+            <div class="f"></div>
+            <div class="h"></div>
+            <div class="l"></div>
+            <div class="r"></div>
+        </div>
+
+    </div>
+</body>
+</html>
